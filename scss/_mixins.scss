@@ -1,0 +1,15 @@
+@mixin flex-props($justify, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin sizes($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin max-widths($max-width, $width: 100%) {
+    max-width: $max-width;
+    width: $width;
+}

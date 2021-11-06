@@ -1,0 +1,52 @@
+section {
+    .container {
+        // max-width: $container-size;
+        // width: 100%;
+        @include max-widths($container-size);
+        margin: 0 auto;
+        background-color: darkcyan;
+        padding: 50px 0;
+
+        @include flex-props(space-between);
+
+        & > div {
+            // width: $size-1;
+            // height: $size-1;
+            @include sizes($size-1);
+        }
+
+        .left-box {
+            background-color: $color-1;
+
+            p {
+                font-family: $font-1;
+                &:nth-child(2) {
+                    color: white;
+                    font-size: 50px;
+                }
+
+            }
+
+            &:hover {
+                background-color: yellowgreen;
+            }
+
+        }
+
+        .right-box {
+            background-color: $color-2;
+
+            p {
+                color: white;
+                font-size: 50px;
+                &::before {
+                    content: "nested before";
+                    margin-right: 15px;
+                }
+            }
+        }
+        
+        
+    }
+
+}
